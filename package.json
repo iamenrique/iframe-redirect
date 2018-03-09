@@ -1,0 +1,13 @@
+{
+  "name": "iframe-redirect",
+  "version": "1.0.0",
+  "description": "Deteccion de cambios en la ruta de un iframe interno (SPA-like)",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server ./src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Enrique Díaz Romero <enriqued_93@hotmail.com>",
+  "private": true,
+  "license": "UNLICENSED"
+}

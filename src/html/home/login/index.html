@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home > Log In</title>
+</head>
+<body>
+<p>Prueba el callback desde el contexto del iframe
+	<button onclick="RedirectService.navigationTriggered()">RedirectService.navigationTriggered</button>
+</p>
+<h2>Home > Log In</h2>
+<ul>
+	<li><a href="../registro">Registro</a></li>
+</ul>
+<p>Esta página redirecciona a Home usando JavaScript en 5 segundos...</p>
+<p>Puedes volver a Home <a href="../../home">aquí</a></p>
+<script src="/js/redirect-service.js"></script>
+<script>
+    (function () {
+        setTimeout(function () {
+            console.log('JavaScript mandando a Home');
+            window.location.href = '/html/home';
+        }, 5000)
+    })();
+</script>
+</body>
+</html>

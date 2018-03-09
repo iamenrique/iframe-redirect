@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Redirect Detection</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<h1>Challenge 01</h1>
+<h2>Redirect Detection</h2>
+<p><em>Descripción:</em> El problema principal es crear un detector de cambios en la ruta
+	de un iframe interno que simula el comportamiento de un SPA. Para el callback a ejecutar,
+	basta con un console.log (puntos extras si se muestra el origen y destino de la navegación.</p>
+<p>Aunque estés tentado a invocar el callback en los eventos click de cada &lt;a&gt;, ¡NO LO
+	HAGAS! El objetivo es encontrar un <strong><em>método de detección inteligente</em></strong>
+	el cual no te obligue a modificar todos los archivos donde haya redirecciones </p>
+<p>El callback que se debe invocar en cada navegación se encuentra definida en el contexto global:
+	<pre><code>window.RedirectService.navigationTriggered()</code></pre>
+Prueba el callback desde el contexto superior <button onclick="RedirectService.navigationTriggered()">RedirectService.navigationTriggered</button></p>
+
+<nav class="wt-navbar">
+	<a class="wt-link" href="#" data-redirect="html/home">Home</a>
+	<a class="wt-link" href="#" data-redirect="html/cursos">Cursos</a>
+	<a class="wt-link" href="#" data-redirect="html/eventos">Eventos</a>
+	<a class="wt-link" href="#" data-redirect="html/membresias">Membresías</a>
+	<a class="wt-link" href="#" data-redirect="html/blog">Blog</a>
+</nav>
+
+<iframe id="wt-spa-iframe" class="wt-iframe" src="html/home"></iframe>
+
+<script src="js/main-script.js"></script>
+<script src="js/redirect-service.js"></script>
+
+</body>
+</html>
